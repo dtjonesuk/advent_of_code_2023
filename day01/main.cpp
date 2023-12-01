@@ -14,7 +14,7 @@ namespace day01 {
 
             while (std::getline(istream, line)) {
                 // do something
-                lines.push_back(line);
+                lines.emplace_back(std::move(line));
             }
         }
 
