@@ -1,14 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <cassert>
-#include <string>
-#include <vector>
-#include <map>
-#include <algorithm>
-#include <functional>
-#include <numeric>
-#include <ranges>
-#include <chrono>
+#include "../advent.h"
 
 namespace day## {
     /// Change this to the current day
@@ -71,13 +61,13 @@ namespace day## {
 
         {
             std::cout << std::fixed << std::setprecision(3);
-            auto [seconds, result] = eval<int>(&partOne);
+            auto [seconds, result] = advent::eval<int>(&partOne);
 
             std::cout << "Day " << day << ": Part One = " << result << "\t (completed in " << seconds << "s).\n";
         }
         {
             std::cout << std::fixed << std::setprecision(3);
-            auto [seconds, result] = eval<int>(&partTwo);
+            auto [seconds, result] = advent::eval<int>(&partTwo);
 
             std::cout << "Day " << day << ": Part One = " << result << "\t (completed in " << seconds << "s).\n";
         }
