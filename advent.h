@@ -14,6 +14,7 @@
 #include <functional>
 #include <numeric>
 #include <ranges>
+#include <regex>
 #include <chrono>
 
 namespace advent {
