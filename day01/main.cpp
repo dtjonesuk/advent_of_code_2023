@@ -72,7 +72,18 @@ namespace day01 {
 
     /// Unit Test
     void test() {
-        assert(true);
+        assert(sumFirstLast("1abc2") == 12);
+        assert(sumFirstLast("pqr3stu8vwx") == 38);
+        assert(sumFirstLast("a1b2c3d4e5f") == 15);
+        assert(sumFirstLast("treb7uchet") == 77);
+
+        assert(sumFirstLast(convertWordsToDigits("two1nine")) == 29 );
+        assert(sumFirstLast(convertWordsToDigits("eightwothree")) == 83 );
+        assert(sumFirstLast(convertWordsToDigits("abcone2threexyz")) == 13 );
+        assert(sumFirstLast(convertWordsToDigits("xtwone3four")) == 24 );
+        assert(sumFirstLast(convertWordsToDigits("4nineeightseven2")) == 42 );
+        assert(sumFirstLast(convertWordsToDigits("zoneight234")) == 14 );
+        assert(sumFirstLast(convertWordsToDigits("7pqrstsixteen")) == 76 );
     }
 
     /// Part One Solution
