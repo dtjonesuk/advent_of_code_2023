@@ -6,8 +6,8 @@
 
 #include <iostream>
 #include <fstream>
-#include <cassert>
 #include <string>
+#include <sstream>
 #include <vector>
 #include <map>
 #include <algorithm>
@@ -16,6 +16,7 @@
 #include <ranges>
 #include <regex>
 #include <chrono>
+#include <cassert>
 
 namespace advent {
 /// Benchmarks a callable

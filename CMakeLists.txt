@@ -4,4 +4,5 @@ project(advent_of_code_2023)
 set(CMAKE_CXX_STANDARD 23)
 
 add_executable(day01 day01/main.cpp)
-add_executable(day02 day02/main.cpp)
+add_executable(day02 day02/main.cpp
+        day02/Game.cpp)
