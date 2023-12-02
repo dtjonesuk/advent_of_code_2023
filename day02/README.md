@@ -1,8 +1,6 @@
 # Advent of Code 2023 :: Day 02
 
-# Cube Conundrum
-
-## Task
+## Cube Conundrum
 
 Today we are tasked with paying various games with an elf who pulls different coloured cubes out of a bag at random.
 

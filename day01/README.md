@@ -1,8 +1,6 @@
 # Advent of Code 2023 :: Day 01
 
-# Trebuchet?!
-
-## Task
+## Trebuchet?!
 
 Today we are tasked with finding various calibration values for a trebuchet the elves are strapping me into!
 
