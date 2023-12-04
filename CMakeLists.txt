@@ -9,3 +9,4 @@ add_executable(day02 day02/main.cpp
 add_executable(day03 day03/main.cpp
         day03/Schematic.cpp
         day03/Schematic.h)
+add_executable(day04 day04/main.cpp)
