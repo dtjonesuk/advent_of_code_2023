@@ -1,4 +1,7 @@
 #include "../advent.h"
+#include <deque>
+#include "ScratchCard.h"
+#include "CardCounter.h"
 
 namespace day04 {
     /// Change this to the current day
@@ -7,7 +10,7 @@ namespace day04 {
     static const std::string testFilename = "..\\day" + day + "\\test.txt";
 
     struct PuzzleInput {
-        std::vector<std::string> lines;
+        std::vector<ScratchCard> cards;
 
         explicit PuzzleInput(const std::string &filename) {
             std::ifstream istream(filename);
@@ -15,25 +18,36 @@ namespace day04 {
 
             while (std::getline(istream, line)) {
                 // do something
-                lines.emplace_back(std::move(line));
+                cards.emplace_back(line);
             }
         }
 
     };
 
+    int sum_card_points(const std::vector<ScratchCard> &cards) {
+        using namespace std::views;
+        auto result = cards | transform(&ScratchCard::points);
+        return std::reduce(result.begin(), result.end());
+    }
+
     /// Unit Test
     void test() {
         PuzzleInput input(testFilename);
-        assert(true);
+
+        assert(input.cards.size() == 6);
+        assert(sum_card_points(input.cards) == 13);
+
+        CardCounter counter(input.cards);
+        assert(counter.total() == 30);
     }
 
     /// Part One Solution
-    int partOne() {
+    long partOne() {
         using namespace std::views;
 
         PuzzleInput input(inputFilename);
 
-        return 0;
+        return sum_card_points(input.cards);
     }
 
 
@@ -42,8 +56,9 @@ namespace day04 {
         using namespace std::views;
 
         PuzzleInput input(inputFilename);
+        CardCounter counter(input.cards);
 
-        return 0;
+        return counter.total();
     }
 
     void run() {
@@ -53,13 +68,15 @@ namespace day04 {
             std::cout << std::fixed << std::setprecision(3);
             auto [seconds, result] = advent::eval<int>(&partOne);
 
-            std::cout << "Day " << day << ": Part One = " << result << "\t\t (completed in " << seconds << "s).\n";
+            std::cout << "Day " << day << ": Part One = " << result << "\t\t (completed in " << seconds << "s)."
+                      << std::endl;
         }
         {
             std::cout << std::fixed << std::setprecision(3);
             auto [seconds, result] = advent::eval<int>(&partTwo);
 
-            std::cout << "Day " << day << ": Part One = " << result << "\t\t (completed in " << seconds << "s).\n";
+            std::cout << "Day " << day << ": Part One = " << result << "\t\t (completed in " << seconds << "s)."
+                      << std::endl;
         }
     }
 }

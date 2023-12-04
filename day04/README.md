@@ -2,7 +2,7 @@
 
 ## Scratch Cards
 
-Today we are tasked with 
+Today we are tasked with calculating the winnings from a large pile of scratchcards.
 
 ## Parsing the input
 

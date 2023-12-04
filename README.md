@@ -9,3 +9,4 @@ See `main.cpp` and `advent.h` for details).
 - Day 01 - [Trebuchet?!](day01/README.md)
 - Day 02 - [Cube Conundrum](day02/README.md)
 - Day 03 - [Gear Ratios](day03/README.md)
+- Day 04 0 [Scratch Cards](day04/README.md)
