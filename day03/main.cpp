@@ -1,4 +1,5 @@
 #include "../advent.h"
+#include "Schematic.h"
 
 namespace day03 {
     /// Change this to the current day
@@ -7,7 +8,7 @@ namespace day03 {
     static const std::string testFilename = "..\\day" + day + "\\test.txt";
 
     struct PuzzleInput {
-        std::vector<std::string> lines;
+        Schematic schematic;
 
         explicit PuzzleInput(const std::string &filename) {
             std::ifstream istream(filename);
@@ -15,16 +16,25 @@ namespace day03 {
 
             while (std::getline(istream, line)) {
                 // do something
-                lines.emplace_back(std::move(line));
+                schematic.lines.emplace_back(std::move(line));
             }
         }
 
     };
 
+
     /// Unit Test
     void test() {
+        using namespace std::views;
         PuzzleInput input(testFilename);
-        assert(true);
+        auto part_numbers = input.schematic.find_part_numbers();
+        assert( std::reduce(part_numbers.begin(), part_numbers.end()) == 4361);
+
+        auto gears = input.schematic.find_gears()
+                | filter([](auto &item) { return item.second.size() == 2; })
+                | transform([](auto &item) { return item.second[0] * item.second[1]; });
+
+        assert(std::reduce(gears.begin(), gears.end()) == 467835);
     }
 
     /// Part One Solution
@@ -32,8 +42,8 @@ namespace day03 {
         using namespace std::views;
 
         PuzzleInput input(inputFilename);
-
-        return 0;
+        auto part_numbers = input.schematic.find_part_numbers();
+        return std::reduce(part_numbers.begin(), part_numbers.end());
     }
 
 
@@ -42,8 +52,10 @@ namespace day03 {
         using namespace std::views;
 
         PuzzleInput input(inputFilename);
-
-        return 0;
+        auto gears = input.schematic.find_gears()
+                     | filter([](auto &item) { return item.second.size() == 2; })               // only gears with 2 ratios
+                     | transform([](auto &item) { return item.second[0] * item.second[1]; });   // multiply ratios
+        return std::reduce(gears.begin(), gears.end());                                         // return sum
     }
 
     void run() {
