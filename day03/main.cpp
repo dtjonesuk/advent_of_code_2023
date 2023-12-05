@@ -57,25 +57,11 @@ namespace day03 {
                      | transform([](auto &item) { return item.second[0] * item.second[1]; });   // multiply ratios
         return std::reduce(gears.begin(), gears.end());                                         // return sum
     }
-
-    void run() {
-        test();
-
-        {
-            std::cout << std::fixed << std::setprecision(3);
-            auto [seconds, result] = advent::eval<int>(&partOne);
-
-            std::cout << "Day " << day << ": Part One = " << result << "\t\t (completed in " << seconds << "s).\n";
-        }
-        {
-            std::cout << std::fixed << std::setprecision(3);
-            auto [seconds, result] = advent::eval<int>(&partTwo);
-
-            std::cout << "Day " << day << ": Part One = " << result << "\t\t (completed in " << seconds << "s).\n";
-        }
-    }
 }
 
 int main() {
-    day03::run();
+    using namespace day03;
+    test();
+    advent::run<int>(day, "One", partOne);
+    advent::run<int>(day, "Two", partTwo);
 }

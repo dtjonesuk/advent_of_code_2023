@@ -1,8 +1,8 @@
 #include "../advent.h"
 
-namespace day## {
+namespace day05 {
     /// Change this to the current day
-    static const std::string day = "##";
+    static const std::string day = "05";
     static const std::string inputFilename = "..\\day" + day + "\\input.txt";
     static const std::string testFilename = "..\\day" + day + "\\test.txt";
 
@@ -49,8 +49,8 @@ namespace day## {
 }
 
 int main() {
-    using namespace day##;
+    using namespace day05;
     test();
-    run<int>(day, "One", partOne);
-    run<int>(day, "Two", partTwo);
+    advent::run<int>(day, "One", partOne);
+    advent::run<int>(day, "Two", partTwo);
 }

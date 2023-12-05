@@ -120,25 +120,11 @@ namespace day01 {
 
         return result;
     }
-
-    void run() {
-        test();
-
-        {
-            std::cout << std::fixed << std::setprecision(3);
-            auto [seconds, result] = advent::eval<int>(&partOne);
-
-            std::cout << "Day " << day << ": Part One = " << result << "\t (completed in " << seconds << "s).\n";
-        }
-        {
-            std::cout << std::fixed << std::setprecision(3);
-            auto [seconds, result] = advent::eval<int>(&partTwo);
-
-            std::cout << "Day " << day << ": Part One = " << result << "\t (completed in " << seconds << "s).\n";
-        }
-    }
 }
 
 int main() {
-    day01::run();
+    using namespace day01;
+    test();
+    advent::run<int>(day, "One", partOne);
+    advent::run<int>(day, "Two", partTwo);
 }

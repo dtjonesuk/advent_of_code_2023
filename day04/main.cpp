@@ -60,27 +60,11 @@ namespace day04 {
 
         return counter.total();
     }
-
-    void run() {
-        test();
-
-        {
-            std::cout << std::fixed << std::setprecision(3);
-            auto [seconds, result] = advent::eval<int>(&partOne);
-
-            std::cout << "Day " << day << ": Part One = " << result << "\t\t (completed in " << seconds << "s)."
-                      << std::endl;
-        }
-        {
-            std::cout << std::fixed << std::setprecision(3);
-            auto [seconds, result] = advent::eval<int>(&partTwo);
-
-            std::cout << "Day " << day << ": Part One = " << result << "\t\t (completed in " << seconds << "s)."
-                      << std::endl;
-        }
-    }
 }
 
 int main() {
-    day04::run();
+    using namespace day04;
+    test();
+    advent::run<int>(day, "One", partOne);
+    advent::run<int>(day, "Two", partTwo);
 }

@@ -89,7 +89,6 @@ namespace day02 {
         return calc_possible_games(input.games, available);
     }
 
-
     /// Part Two Solution
     int partTwo() {
         using namespace std::views;
@@ -99,24 +98,12 @@ namespace day02 {
         return calc_minimum_cube_power(input.games);
     }
 
-    void run() {
-        test();
 
-        {
-            std::cout << std::fixed << std::setprecision(3);
-            auto [seconds, result] = advent::eval<int>(&partOne);
-
-            std::cout << "Day " << day << ": Part One = " << result << "\t\t (completed in " << seconds << "s).\n";
-        }
-        {
-            std::cout << std::fixed << std::setprecision(3);
-            auto [seconds, result] = advent::eval<int>(&partTwo);
-
-            std::cout << "Day " << day << ": Part One = " << result << "\t (completed in " << seconds << "s).\n";
-        }
-    }
 }
 
 int main() {
-    day02::run();
+    using namespace day02;
+    test();
+    advent::run<int>(day, "One", partOne);
+    advent::run<int>(day, "Two", partTwo);
 }
