@@ -14,4 +14,7 @@ add_executable(day04 day04/main.cpp
         day04/ScratchCard.h
         day04/CardCounter.cpp
         day04/CardCounter.h)
-add_executable(day05 day05/main.cpp)
+add_executable(day05 day05/main.cpp
+        day05/Map.cpp
+        day05/Map.h)
+add_executable(day06 day06/main.cpp)

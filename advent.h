@@ -36,7 +36,7 @@ namespace advent {
         auto [seconds, result] = advent::eval<T>(func);
 
         std::cout << "Day " << day << ": Part " << part << " = " << result << "\t\t (completed in " << seconds
-                  << "s).\n";
+                  << "s)." << std::endl;
     }
 }
 #endif //ADVENT_OF_CODE_2023_ADVENT_H

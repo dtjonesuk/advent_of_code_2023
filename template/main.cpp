@@ -51,6 +51,6 @@ namespace day## {
 int main() {
     using namespace day##;
     test();
-    run<int>(day, "One", partOne);
-    run<int>(day, "Two", partTwo);
+    advent::run<int>(day, "One", partOne);
+    advent::run<int>(day, "Two", partTwo);
 }
