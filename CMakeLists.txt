@@ -18,3 +18,5 @@ add_executable(day05 day05/main.cpp
         day05/Map.cpp
         day05/Map.h)
 add_executable(day06 day06/main.cpp)
+add_executable(day07 day07/main.cpp
+        day07/Hand.h)

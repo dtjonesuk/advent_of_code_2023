@@ -1,6 +1,6 @@
-# Advent of Code 2023 :: Day 05
+# Advent of Code 2023 :: Day 07
 
-## If You Give A Seed A Fertilizer
+## Camel Cards
 
 Today we are tasked with 
 
