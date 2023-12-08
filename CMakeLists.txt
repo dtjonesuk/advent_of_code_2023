@@ -23,3 +23,4 @@ add_executable(day07 day07/main.cpp
 add_executable(day08 day08/main.cpp
         day08/Network.cpp
         day08/Network.h)
+add_executable(day09 day09/main.cpp)
