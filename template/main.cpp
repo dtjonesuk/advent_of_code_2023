@@ -9,8 +9,7 @@ namespace day## {
     struct PuzzleInput {
         std::vector<std::string> lines;
 
-        explicit PuzzleInput(const std::string &filename) {
-            std::ifstream istream(filename);
+        explicit PuzzleInput(std::istream &istream) {
             std::string line;
 
             while (std::getline(istream, line)) {
@@ -23,25 +22,28 @@ namespace day## {
 
     /// Unit Test
     void test() {
-        PuzzleInput input(testFilename);
+        std::ifstream istream(testFilename);
+        PuzzleInput input(istream);
         assert(true);
     }
 
     /// Part One Solution
-    int partOne() {
+    int64_t partOne() {
         using namespace std::views;
 
-        PuzzleInput input(inputFilename);
+        std::ifstream istream(inputFilename);
+        PuzzleInput input(istream);
 
         return 0;
     }
 
 
     /// Part Two Solution
-    int partTwo() {
+    int64_t partTwo() {
         using namespace std::views;
 
-        PuzzleInput input(inputFilename);
+        std::ifstream istream(inputFilename);
+        PuzzleInput input(istream);
 
         return 0;
     }
@@ -51,6 +53,6 @@ namespace day## {
 int main() {
     using namespace day##;
     test();
-    advent::run<int>(day, "One", partOne);
-    advent::run<int>(day, "Two", partTwo);
+    advent::run<int64_t>(day, "One", partOne);
+    advent::run<int64_t>(day, "Two", partTwo);
 }
