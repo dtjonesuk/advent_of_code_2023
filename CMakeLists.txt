@@ -20,3 +20,6 @@ add_executable(day05 day05/main.cpp
 add_executable(day06 day06/main.cpp)
 add_executable(day07 day07/main.cpp
         day07/Hand.h)
+add_executable(day08 day08/main.cpp
+        day08/Network.cpp
+        day08/Network.h)
