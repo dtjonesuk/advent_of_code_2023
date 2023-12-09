@@ -79,7 +79,7 @@ namespace day02 {
     }
 
     /// Part One Solution
-    int partOne() {
+    int64_t partOne() {
 
         PuzzleInput input(inputFilename);
         Round available{{"red",   12},
@@ -90,7 +90,7 @@ namespace day02 {
     }
 
     /// Part Two Solution
-    int partTwo() {
+    int64_t partTwo() {
         using namespace std::views;
 
         PuzzleInput input(inputFilename);
@@ -104,6 +104,6 @@ namespace day02 {
 int main() {
     using namespace day02;
     test();
-    advent::run<int>(day, "One", partOne);
-    advent::run<int>(day, "Two", partTwo);
+    advent::run<int64_t>(day, "One", partOne);
+    advent::run<int64_t>(day, "Two", partTwo);
 }

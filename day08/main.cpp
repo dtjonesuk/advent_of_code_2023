@@ -62,7 +62,6 @@ namespace day08 {
         // this is a cheat: we need to find the length of the repeat for each ghost
         // we assume the length of repeat is the distance to the first 'xxZ'
         // we assume we don't start in the middle of any sequence
-        std::vector<const std::string *> current_nodes;
         std::vector<int64_t> repeats;
         for (auto &node: input.network.nodes) {
             if (node.first.back() == 'A') {

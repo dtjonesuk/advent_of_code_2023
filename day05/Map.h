@@ -9,6 +9,7 @@
 #include <stdexcept>
 #include <set>
 #include <map>
+#include <vector>
 #include <utility>
 
 namespace day05 {
@@ -60,8 +61,8 @@ namespace day05 {
 
         }
 
-        void convert_ranges(Map<T> map) {
-
+        std::vector<std::pair<T, T>> convert_range(std::pair<T,T> range) const {
+            return std::vector<std::pair<T, T>>();
         }
 
         const std::string from;

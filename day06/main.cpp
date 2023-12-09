@@ -1,4 +1,5 @@
 #include "../advent.h"
+#include <cmath>
 
 namespace day06 {
     /// Change this to the current day
@@ -112,6 +113,6 @@ namespace day06 {
 int main() {
     using namespace day06;
     test();
-    advent::run<uint64_t>(day, "One", partOne);
-    advent::run<uint64_t>(day, "Two", partTwo);
+    advent::run<int64_t>(day, "One", partOne);
+    advent::run<int64_t>(day, "Two", partTwo);
 }

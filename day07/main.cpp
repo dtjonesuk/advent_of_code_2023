@@ -52,7 +52,7 @@ namespace day07 {
     }
 
     /// Part One Solution
-    int partOne() {
+    int64_t partOne() {
         using namespace std::views;
 
         PuzzleInput input(inputFilename);
@@ -62,7 +62,7 @@ namespace day07 {
 
 
     /// Part Two Solution
-    int partTwo() {
+    int64_t partTwo() {
         using namespace std::views;
 
         PuzzleInput input(inputFilename);
@@ -75,6 +75,6 @@ namespace day07 {
 int main() {
     using namespace day07;
     test();
-    advent::run<int>(day, "One", partOne);
-    advent::run<int>(day, "Two", partTwo);
+    advent::run<int64_t>(day, "One", partOne);
+    advent::run<int64_t>(day, "Two", partTwo);
 }
