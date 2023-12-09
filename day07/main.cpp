@@ -1,5 +1,6 @@
 #include "../advent.h"
 #include "Hand.h"
+#include "HandPartOne.h"
 #include "HandPartTwo.h"
 
 namespace day07 {
@@ -9,7 +10,7 @@ namespace day07 {
     static const std::string testFilename = "..\\day" + day + "\\test.txt";
 
     struct PuzzleInput {
-        std::vector<Hand> hands;
+        std::vector<HandPartOne> hands;
         std::vector<HandPartTwo> hands2;
 
         explicit PuzzleInput(const std::string &filename) {

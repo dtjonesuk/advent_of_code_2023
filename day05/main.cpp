@@ -82,10 +82,9 @@ namespace day05 {
         T lowest = INT64_MAX;
         Map<T> final_map("seed", "location");
         final_map.ranges = maps.at("seed").ranges;
-
-
         std::string current = "seed";
         std::vector<std::pair<T, T>> ranges = seed_ranges;
+
         while (maps.contains(current)) {
             const Map<T> &map = maps.at(current);
             std::vector<std::pair<T, T>> converted_ranges;
@@ -95,16 +94,8 @@ namespace day05 {
             }
 
             current = map.to;
-            ranges = converted_ranges;
+            ranges = std::move(converted_ranges);
         }
-
-//            for (T n = seed_range.first; n < (seed_range.first + seed_range.second); ++n) {
-//                T item = final_map.convert(n);
-//                lowest = std::min(lowest, item);
-//            }
-
-
-
 
         return lowest;
     }
@@ -123,7 +114,7 @@ namespace day05 {
         }
         {
             // TODO: Part Two incomplete
-//            assert(find_locations(input.seed_ranges, input.maps) == 46);
+           assert(find_locations(input.seed_ranges, input.maps) == 46);
         }
     }
 

@@ -10,30 +10,33 @@
 
 namespace day07 {
 
+    enum HandType {
+        HighCard = 0,
+        OnePair,
+        TwoPair,
+        ThreeOfAKind,
+        FullHouse,
+        FourOfAKind,
+        FiveOfAKind
+    };
+
+    template <typename Base>
     class Hand {
     public:
-        enum HandType {
-            HighCard = 0,
-            OnePair,
-            TwoPair,
-            ThreeOfAKind,
-            FullHouse,
-            FourOfAKind,
-            FiveOfAKind
-        };
+        Hand(std::string str, int bid)  : hand(std::move(str)), bid(bid) {
+            if (hand.size() != 5)
+                throw std::invalid_argument("Invalid hand string");
+            card_values = static_cast<Base &>(*this).get_card_values();
+            type = static_cast<Base &>(*this).get_type();
+            values = static_cast<Base &>(*this).get_values();
+        }
 
-        Hand(std::string str, int bid);
-
-        virtual ~Hand() = default;
-
-        bool operator<(const Hand &other);
-
-//        bool operator>(const Hand &other) {
-//            if (other.type == type) {
-//                return values > other.values;
-//            } else
-//                return type > other.type;
-//        }
+        bool operator<(const Hand &other) {
+            if (other.type == type) {
+                return values < other.values;
+            } else
+                return type < other.type;
+        }
 
         std::string hand;
         int bid;
@@ -42,18 +45,32 @@ namespace day07 {
 
 
     protected:
-        // Calculates the type of hand we have
-        [[nodiscard]] HandType get_type() const;
+        static HandType from_buckets(std::vector<unsigned> &buckets) {
+            if (buckets[0] == 5)
+                return FiveOfAKind;
 
-        // Calculates the values of the cards
-        [[nodiscard]] std::vector<unsigned> get_values() const;
+            if (buckets[0] == 4)
+                return FourOfAKind;
 
-        static HandType from_buckets(std::vector<unsigned> &buckets);
+            if (buckets[0] == 3) {
+                if (buckets[1] == 2)
+                    return FullHouse;
+                else return ThreeOfAKind;
+            }
 
+            if (buckets[0] == 2) {
+                if (buckets[1] == 2)
+                    return TwoPair;
+                else
+                    return OnePair;
+            }
+
+            return HighCard;
+        }
         std::map<char, int> card_values;
     };
 
-    std::string to_string(Hand::HandType hand_type);
+    std::string to_string(HandType hand_type);
 } // day07
 
 #endif //ADVENT_OF_CODE_2023_HAND_H

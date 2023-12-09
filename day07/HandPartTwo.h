@@ -11,14 +11,15 @@
 
 namespace day07 {
 
-    class HandPartTwo : public Hand {
+    class HandPartTwo : public Hand<HandPartTwo> {
     public:
-        HandPartTwo(std::string str, int bid);
+        HandPartTwo(std::string str, int bid) : Hand(str, bid) {}
 
         [[nodiscard]] HandType get_type() const;
 
         [[nodiscard]] std::vector<unsigned> get_values() const;
 
+        [[nodiscard]] std::map<char, int> get_card_values() const;
     };
 
 
