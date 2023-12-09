@@ -1,6 +1,6 @@
-# Advent of Code 2023 :: Day 04
+# Advent of Code 2023 :: Day 09
 
-## Scratch Cards
+## Mirage Maintenance
 
 Today we are tasked with 
 

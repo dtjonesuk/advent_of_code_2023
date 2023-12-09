@@ -1,6 +1,6 @@
 # Advent of Code 2023 :: Day 08
 
-## 
+## Hanted Wasteland
 
 Today we are tasked with 
 

@@ -12,4 +12,6 @@ See `main.cpp` and `advent.h` for details).
 - Day 04 - [Scratch Cards](day04/README.md)
 - Day 05 - [If You Give A Seed A Fertilizer](day05/README.md)
 - Day 06 - [Wait For It](day06/README.md)
-- Day 06 - [Camel Cards](day07/README.md)
+- Day 07 - [Camel Cards](day07/README.md)
+- Day 08 - [Hanted Wasteland](day08/README.md)
+- Day 09 - [Mirage Maintenance](day09/README.md)
