@@ -28,3 +28,11 @@ add_executable(day08 day08/main.cpp
         day08/Network.cpp
         day08/Network.h)
 add_executable(day09 day09/main.cpp)
+add_executable(day10 day10/main.cpp
+        day10/Pipe.cpp
+        day10/Pipe.h)
+add_executable(day11 day11/main.cpp
+        day11/Galaxy.cpp
+        day11/Galaxy.h
+        day11/Universe.cpp
+        day11/Universe.h)
