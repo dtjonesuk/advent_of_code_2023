@@ -36,3 +36,5 @@ add_executable(day11 day11/main.cpp
         day11/Galaxy.h
         day11/Universe.cpp
         day11/Universe.h)
+add_executable(day12 day12/main.cpp)
+add_executable(day13 day13/main.cpp)

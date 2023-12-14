@@ -15,3 +15,7 @@ See `main.cpp` and `advent.h` for details).
 - Day 07 - [Camel Cards](day07/README.md)
 - Day 08 - [Hanted Wasteland](day08/README.md)
 - Day 09 - [Mirage Maintenance](day09/README.md)
+- Day 10 - [Pipe Maze](day10/README.md)
+- Day 11 - [Cosmic Expansion](day11/README.md)
+- Day 12 - [Hot Springs](day12/README.md)
+- Day 13 - [Point of Incidence](day13/README.md)
