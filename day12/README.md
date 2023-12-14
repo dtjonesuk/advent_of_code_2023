@@ -1,6 +1,6 @@
-# Advent of Code 2023 :: Day 10
+# Advent of Code 2023 :: Day 12
 
-## Pipe Maze
+## Hot Springs
 
 Today we are tasked with 
 
