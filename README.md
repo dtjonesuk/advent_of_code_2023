@@ -19,3 +19,4 @@ See `main.cpp` and `advent.h` for details).
 - Day 11 - [Cosmic Expansion](day11/README.md)
 - Day 12 - [Hot Springs](day12/README.md)
 - Day 13 - [Point of Incidence](day13/README.md)
+- Day 14 - [Parabolic Reflector Dish](day14/README.md)
